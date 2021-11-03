@@ -21,7 +21,7 @@ now = int(time.time())
 n=int(input("How many random numbers do you want? "))
 
 # set values for the modulus, multiplier and increment (all odd values for better results)
-m = 100 #(2**31)-1
+m = (2**31)-1
 a = 2147483629
 c = 2147483587
 
