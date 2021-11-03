@@ -130,6 +130,8 @@ def emailFun():
         print()
         print (" Something went wrong...Please try again :( \n")
         emailFun()
+    finally:
+        print("Thank you :) !")
 
 # final surprise output
 def verify() :
@@ -176,6 +178,5 @@ def verify() :
 
 emailFun()
 
-print("Thank you :) !")
 
 
