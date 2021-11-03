@@ -1,4 +1,4 @@
-# True Random Number Generator using Linear Congruential Generator
+# Random Number Generator using Linear Congruential Generator and takes input from txt file
 
 # importing libraries 
 import smtplib
