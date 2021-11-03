@@ -163,7 +163,7 @@ def verify() :
              .-'''''''-.
            .'           '.
           /   O      O   \
-         :                :   incorect....try again
+         :                :   incorrect....try again
          |                |      
          :    .------.    :
           \  '        '  /
