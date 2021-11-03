@@ -66,8 +66,7 @@ def lcg(contents, n, m, a, c):
     print("1. Statistics: \n","Mean:", mean, "\n Standard deviation:", standard_deviation, "\n Variance:", variance)
     return box
 
-# calling the function with the seed(sytem time), n (number of expected output values), m (modulus), a (multiplier)
-# and c (increment)
+# calling the function with the seed(txt file content), n (number of expected output values), m (modulus), a (multiplier), and c (increment)
 answer = lcg(contents, n, m, a, c)
 
 time.sleep(1)
