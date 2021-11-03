@@ -21,7 +21,7 @@ now = int(time.time())
 n=int(input("How many random numbers do you want? "))
 
 # set values for the modulus, multiplier and increment (all odd values for better results)
-m = (2**31)-1
+m = 100 #(2**31)-1
 a = 2147483629
 c = 2147483587
 
@@ -65,7 +65,8 @@ def lcg(now, n, m, a, c):
     print("1. Statistics: \n","Mean:", mean, "\n Standard deviation:", standard_deviation, "\n Variance:", variance)
     return box
 
-# calling the function with the seed(sytem time), n (number of expected output values), m (modulus), a (multiplier), c (increment)
+# calling the function with the seed(sytem time), n (number of expected output values), m (modulus), a (multiplier)
+# and c (increment)
 answer = lcg(now, n, m, a, c)
 
 time.sleep(1)
@@ -74,6 +75,7 @@ time.sleep(1)
 
 print("\n2. Real-life application - Email verification codes:  ")
 
+# define a function that calculates a verification code amd sends a verification email to user
 def emailFun():
     
     # verification code will me the median
@@ -84,7 +86,6 @@ def emailFun():
         
     else:
         middle_value = int((answer[int( n/2 )]+answer[int( n/2 )-1 ]) /2 )
-        
         
     global verification_code
     # calling the median verification code for ease of understanding
@@ -103,16 +104,10 @@ def emailFun():
     sent_from = gmail_user
     to = [gmail]
     subject = "Nour Sharaky - Email verification code"
-    body = ('Your verification code is: ', verification_code)
+    body = 'Your verification code is: '+ str(verification_code)
 
-    email_text = """\
-    From: %s
-    To: %s
-    Subject: %s
-
-    %s
-    """ % (sent_from, ", ".join(to), subject, body)
-
+    email_text = "From: "+sent_from+"\nTo:,"+str(to)+"\nSubject:"+subject+"\n\n"+body
+    
     # to check whether the gmail address input was valid or not
     try:
         # establish SMTP connection using smtp.gmail.com as server and 587 as port number
