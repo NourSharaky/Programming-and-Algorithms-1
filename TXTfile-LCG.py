@@ -13,6 +13,11 @@ time.sleep(0.5)
 print("------>Nour")
 time.sleep(0.5)
 print("------------>Sharaky")
+time.sleep(0.5)
+
+# allows user to edit the txt file and add their own input
+print("Optional: \n1. Find the number.txt file attached on github \n2. Edit the file and input your desired number/seed \n3. Save your changes and close the file ")
+press_enter = input("Press enter to continue running the program:")
 
 # opens and reads a number(input/seed) from a text file
 with open('number.txt') as f:
