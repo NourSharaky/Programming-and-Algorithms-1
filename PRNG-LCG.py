@@ -6,7 +6,7 @@ import time
 import numpy
 
 # Welcoming user
-print("\nWelcome to my True RANDOM Number Generator program")
+print("\nWelcome to my Pseudo RANDOM Number Generator program")
 time.sleep(0.5)
 print("By:")
 time.sleep(0.5)
